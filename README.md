@@ -20,18 +20,15 @@ Also see more [detailed project documentation](docs/README.md) and the [project 
 ## Site URLs
 
 ### Live
-* https://www.example.com
-* https://www.example.com/cms-admin
-* https://www.example.com/_build_summary.json
+* https://www.strata.dev
+* https://www.strata.dev/_build_summary.json
 
 ### Staging
-* https://staging.example.com
-* https://staging.example.com/cms-admin
-* https://staging.example.com/_build_summary.json
+* https://staging.strata.dev
+* https://staging.strata.dev/_build_summary.json
 
 ### Development
-* https://local.example.com
-* https://local.example.com/cms-admin
+* https://local.strata.dev
 
 ## Installing
 
@@ -51,7 +48,7 @@ A step-by-step set of instructions that tell you how to get your local developme
 Clone repo:
 
 ````bash
-git clone git@github.com:studio24/project-base-template.git
+git clone git@github.com:strata/strata_website.git
 ````
 
 Install PHP dependencies:
@@ -133,10 +130,9 @@ see the [sync](https://github.com/studio24/deployer-recipes/blob/main/docs/sync.
 
 ## Built with
 
-- [Wordpress 5](https://codex.wordpress.org/) - CMS
 - [Apollo 2](https://apollo.studio24.net/) - Front-end starter kit
 
 ## Credits
-- **Name** - *Role* - Studio 24
-- **Name** - *Role* - Studio 24
-- **Name** - *Role* - Studio 24
+- **Alan Isaacson** - *Support Developer* - Studio 24
+- **Simon Jones** - *Managing Director* - Studio 24
+

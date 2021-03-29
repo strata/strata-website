@@ -9,41 +9,32 @@ require 'vendor/studio24/deployer-recipes/all.php';
  */
 
 // Friendly project name
-$project_name = 'Our Test Website';
+$project_name = 'Strata Website';
 
 // The repo for the project
-$repository = 'git@github.com:studio24/xxxxxxxxx.git';
+$repository = 'git@github.com:strata/strata_website.git';
 
 // Array of remote => local file locations to sync to your local development computer
 $sync = [
     'images' => [
-        'shared/web/wp-content/uploads/' => 'web/wp-content/uploads'
     ],
 ];
 
 // Shared files that are not in git and need to persist between deployments (e.g. local config)
 $shared_files = [
-    'config/wp-config.local.php'
-];
+    ];
 
 // Shared directories that are not in git and need to persist between deployments (e.g. uploaded images)
 $shared_directories = [
-    'web/wp-content/uploads',
-    '.well-known',
-    'web/wp-content/cache',
-    'var/log'
-];
+    ];
 
 // Sets directories as writable (e.g. uploaded images)
 $writable_directories = [
-    'web/wp-content/uploads',
-    'web/wp-content/cache'
-];
+    ];
 
 // Custom (non-root) composer installs required
 $composer_paths = [
-    'web/wp-content/plugins/s24-wp-image-optimiser'
-];
+    ];
 
 
 /**
@@ -78,16 +69,16 @@ set('default_stage', 'staging');
 host('production')
     ->stage('production')
     ->user('deploy')
-    ->hostname('123.456.789.10')
-    ->set('deploy_path', '/data/var/www/vhosts/our-site/production')
-    ->set('url', 'https://www.our-website.com');
+    ->hostname('63.34.69.8 ')
+    ->set('deploy_path', '/data/var/www/vhosts/strata.dev/production')
+    ->set('url', 'https://www.strata.dev');
 
 host('staging')
     ->stage('staging')
     ->user('deploy')
-    ->hostname('123.456.789.10')
-    ->set('deploy_path', '/data/var/www/vhosts/our-site/staging')
-    ->set('url', 'https://staging.our-website.com');
+    ->hostname('63.34.69.8 ')
+    ->set('deploy_path', '/data/var/www/vhosts/strata.dev/staging')
+    ->set('url', 'https://staging.strata.dev');
 
 
 /**
@@ -130,7 +121,7 @@ task('deploy', [
 ]);
 
 // Slack notification on successful deploy to prod
-after('success', 's24:notify-slack');
+// after('success', 's24:notify-slack');
 
 // Add unlock to failed deployment event.
 after('deploy:failed', 'deploy:unlock');
