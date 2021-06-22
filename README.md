@@ -1,4 +1,4 @@
-# Client Site name
+# Strata website
 
 Static website for Strata, built using [Apollo](https://apollo.studio24.net/). Hosted on AWS Single Cloud 1. 
 
