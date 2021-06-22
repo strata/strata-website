@@ -1,0 +1,27 @@
+/* amiko-regular - latin */
+@font-face {
+  font-family: 'amiko-webfont';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Amiko Regular'), local('Amiko-Regular'),
+  url('../fonts/Amiko-Regular-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../fonts/Amiko-Regular-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* amiko-semi-bold - latin */
+@font-face {
+  font-family: 'amiko-webfont';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Amiko Semi Bold'), local('Amiko-Semi-Bold'),
+  url('../fonts/Amiko-SemiBold-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../fonts/Amiko-SemiBold-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* amiko-bold - latin */
+@font-face {
+  font-family: 'amiko-webfont';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Amiko Bold'), local('Amiko-Bold'),
+  url('../fonts/Amiko-Bold-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../fonts/Amiko-Bold-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

@@ -1,69 +1,114 @@
 <!doctype html>
 <html lang="en" class="no-js">
 
-<!-- temporary page -->
-
 <head>
     <meta charset="utf-8">
-    <title>Strata</title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta property="og:description" name="description"
-          content="Strata - Deliver fast, accessible user experiences on the modern web"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>(function (H) {
-        H.className = H.className.replace(/\bno-js\b/, 'js')
-    })(document.documentElement)</script>
-    <meta property="og:url" content="https://www.strata.dev/"/>
-    <meta property="og:title" content="Strata"/>
-    <style>
-        body {
-            font-family: sans-serif;
-            max-width: 40em;
-            margin: 2em auto;
-        }
-        h1 {
-            border-bottom: 2px solid grey;
-        }
-        main {
-            margin: 2em 0;
-        }
-        main dt {
-            font-weight: bold;
-            margin-top: 1em;
-        }
-        footer {
-            border-top: 1px solid grey;
-            font-size: 0.9em;
-        }
-    </style>
+    <title>Strata - deliver fast, accessible user experiences on the modern web</title>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta property="og:description" name="description" content="Strata is a set of tools to help to build front-end websites that display content from headless CMSs and other data sources. It's the front of headless CMS."/>
+
+	<link rel="icon" type="image/png" sizes="192x192" href="icon.png">
+	<link rel="apple-touch-icon" href="icon.png">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#7342EC">
+
+	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+	<script src="/dist/assets/js/libraries/fontfaceobserver.js"></script>
+
+	<script>
+		var fontContent = new FontFaceObserver('amiko-webfont');
+		var fontHeadings = new FontFaceObserver('amiko-webfont');
+		Promise.all([fontContent.load(), fontHeadings.load()]).then(function () {
+			document.documentElement.className += " fonts-loaded";
+		});
+	</script>
+
+	<link rel="stylesheet" href="/dist/assets/styles/core.min.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="/dist/assets/styles/advanced.min.css" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)" id="advanced-stylesheet">
+
+	<meta property="og:title" content="Strata"/>
+	<meta property="og:image" content="/dist/assets/images/og-strata-image.png"/>
+	<meta property="og:url" content="https://www.strata.dev/"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+
 </head>
 
 <body>
+	<!-- svg bullets for the features section -->
+	<svg hidden width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+		<path id="lozenge-bullet" d="M4.40728703 21.87698445c-1.03374077 1.03374077-2.66320952 1.08029697-3.6395202.10398629-.97631074-.97631075-.9297545-2.60577944.10398628-3.63952022L18.34145002.87175361C19.37519085-.16198722 21.00465955-.20854347 21.9809703.76776728c.97631068.97631068.92975449 2.60577942-.10398634 3.63952025z"/>
+	</svg>
 
-<div class="wrap">
+<!-- @todo -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <main>
-        <h1>Strata</h1>
-        <p>
-            Strata is a set of tools to help to build front-end websites that use headless CMSs to manage content or get
-            data from a bunch of different data sources. An approach that is ever more typical on the modern web.
-        </p>
-        <dl>
-            <dt>Frontend v0.7 (current release)</dt>
-            <dd>Go to <a href="https://github.com/strata/frontend/tree/v0.7.0">GitHub</a> or read the <a href="https://docs.strata.dev/frontend/">documentation</a></dd>
-            <dt>Frontend v0.8</dt>
-            <dd>Go to <a href="https://github.com/strata/frontend/tree/release/0.8.0">GitHub</a> or read the <a href="https://docs.strata.dev/frontend/v/release%2F0.8.0/">documentation</a></dd>
-            <dt>Data v0.8</dt>
-            <dd>Go to <a href="https://github.com/strata/data/tree/release/0.8.0">GitHub</a> or read the <a href="https://docs.strata.dev/data/v/release%2F0.8.0/">documentation</a></dd>
-        </dl>
-    </main>
+	<div id="top" class="wrap">
+		<a class="skip-link" href="#main">Skip to content</a>
+		<header class="global-header" role="banner">
+			<div>
+				<img src="/dist/assets/svg/strata-logo.svg" width="auto" height="79px" alt="Strata">
+				<ul>
+					<li><a href="https://docs.strata.dev">Docs</a></li>
+					<li><a href="https://github.com/strata">Github</a></li>
+				</ul>
+			</div>
+		</header>
 
-</div>
+		<main id="main" role="main">
+			<section class="main-intro">
+				<h1>Deliver fast, accessible user experiences on the modern web</h1>
+				<p>Strata is a set of tools to help to build front-end websites that display content from headless CMSs and other data sources. It's the front of headless CMS.</p>
+				<p>Store your content where you want and bring it all together with Strata. Built on top of web standards, it starts with a layer of server-rendered HTML, which can be cached and delivered to all users efficiently. JavaScript can then be layered on top of this base web experience, using progressive enhancement.</p>
+				<p>Strata is well suited to content-based sites, or those which deliver content alongside personalisation and other dynamic features. By starting with HTML, leveraging caching, and ensuring web standards are followed it's simpler to deliver accessible, modern web experiences.</p>
+				<div class="main-cta"><a class="cta" href="https://docs.strata.dev/frontend/getting-started/installation">Getting started</a><a href="https://www.studio24.net/contact/">Contact Studio 24 for commercial help</a></div>
+			</section>
 
-<footer class="global-footer">
-    <p>For consultancy, commercial support and help building your next headless CMS project get in touch with us at <a href="https://www.studio24.net/">Studio 24</a></p>
-</footer>
+			<section class="main-used-by">
+				<h2>Strata is used by</h2>
+				<ul>
+					<li><img src="/dist/assets/images/ccs-logo.png" alt="Crown Commercial Service"></li>
+					<li><img src="/dist/assets/images/w3c-logo.png" alt="The World Wide Web Consortium (W3C)"></li>
+					<li><img src="/dist/assets/images/ffi-logo.png" alt="Fauna & Flora International"></li>
+				</ul>
+			</section>
+
+			<section class="main-features">
+				<h2>Features</h2>
+				<ul>
+					<li><svg viewBox="0 0 23 23" height="23" width="23"><use xlink:href="#lozenge-bullet"></use>
+					</svg>Read data from different CMSs and content providers in a standardised way. Read data from different CMSs and content providers in a standardised way.</li>
+					<li><svg viewBox="0 0 23 23" height="23" width="23"><use xlink:href="#lozenge-bullet"></use>
+					</svg>Strongly typed content models to help access content in your templates in predictable ways. Also makes switching content providers in the future easier.</li>
+					<li><svg viewBox="0 0 23 23" height="23" width="23"><use xlink:href="#lozenge-bullet"></use>
+					</svg>Tools to make it simple to translate, map and alter data before its used. Data caching to speed up data requests.</li>
+					<li><svg viewBox="0 0 23 23" height="23" width="23"><use xlink:href="#lozenge-bullet"></use>
+					</svg>Data caching to speed up data requests.</li>
+					<li><svg viewBox="0 0 23 23" height="23" width="23"><use xlink:href="#lozenge-bullet"></use>
+					</svg>Full-page caching to speed up content delivery.</li>
+					<li><svg viewBox="0 0 23 23" height="23" width="23"><use xlink:href="#lozenge-bullet"></use>
+					</svg>Template helpers to automate common website functionality (e.g. pagination, table of contents).</li>
+				</ul>
+			</section>
+		
+			<section class="main-background">
+				<h2>Project stewardship and technology</h2>
+				<p>Strata is an open source project run by digital design and technology agency, <a href="https://studio24.net">Studio 24</a>.</p>
+				<p>It's built on top of the excellent <a href="https://symfony.com/">Symfony</a> and uses the same component approach to make it flexible. You can use it with <a href="https://laravel.com/">Laravel</a> or any other <a href="https://www.php.net/">PHP</a> setup. You can also just use the data layer for your data integration projects.</p>
+				<p>If you need any commercial help with your headless CMS project or want to chat more about our digital services <a href="https://www.studio24.net/contact/">get in touch</a>.</p>
+			</section>
+		</main>
+	</div>
+
+	<footer class="global-footer" role="contentinfo">
+		<div>
+			<img src="/dist/assets/svg/strata-logo-footer.svg" width="auto" height="40px" alt="Strata">
+			<p>Created by Studio 24 | Strata<sup>&reg;</sup> is a registered trademark</p>
+		</div>
+	</footer>
 
 </body>
 </html>

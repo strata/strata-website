@@ -1,6 +1,6 @@
 # Client Site name
 
-WordPress website for Site name. Hosted on AWS Single Cloud 1. 
+Static website for Strata, built using [Apollo](https://github.com/studio24/apollo). Hosted on AWS Single Cloud 1. 
 
 ## Getting started
 
@@ -28,7 +28,7 @@ Also see more [detailed project documentation](docs/README.md) and the [project 
 * https://staging.strata.dev/_build_summary.json
 
 ### Development
-* https://local.strata.dev
+* http://strata.localhost
 
 ## Installing
 
@@ -43,45 +43,48 @@ Also see more [detailed project documentation](docs/README.md) and the [project 
 
 ### Installing locally
 
-A step-by-step set of instructions that tell you how to get your local development environment running.
+How to get your local development environment running.
 
-Clone repo:
+#### Clone repo:
 
 ````bash
 git clone git@github.com:strata/strata_website.git
 ````
 
-Install PHP dependencies:
+#### Install PHP dependencies:
 
 ```php
 composer install
 ```
 
-Install project dependencies:
+#### Install project dependencies:
 
-````bash
-# Switch your version of Node to the correct version for this project (see `.nvmrc`)
+From within the project root
+
+```bash
+# Switch your version of Node to the correct version for this project (see .nvmrc)
 nvm use
 
-cd web/wp-content/themes/example
+# Install dependencies
 npm install
-````
+npm run build
+```
 
-Build assets:
+### Build
 
-````bash
-cd web/wp-content/themes/example
-npm build
-````
+To re-build the assets once
 
-Watch for changes:
+```bash
+npm run build
+```
 
-````bash
-cd web/wp-content/themes/example
-npm watch
-````
+To watch for changes
 
-### Configuration
+```bash
+npm run watch
+```
+
+## Configuration
 
 Any details on configuration files required. 
 
@@ -135,4 +138,5 @@ see the [sync](https://github.com/studio24/deployer-recipes/blob/main/docs/sync.
 ## Credits
 - **Alan Isaacson** - *Support Developer* - Studio 24
 - **Simon Jones** - *Managing Director* - Studio 24
+- **Isaac Lowe** - *Design Strategy Director* - Studio 24
 
