@@ -12,6 +12,3 @@ npm-debug.log
 
 # SASS
 .sass_cache
-
-# dist
-web/dist
