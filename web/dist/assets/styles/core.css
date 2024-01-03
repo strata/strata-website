@@ -1,0 +1,1039 @@
+/*------------------------------------*\
+    #Apollo: core styles for all browsers
+\*------------------------------------*/
+/*------------------------------------*\
+    #Settings
+\*------------------------------------*/
+/*------------------------------------*\
+    #Breakpoints
+
+    The measurements presented here are for guidance only
+    and should be updated to reflect the design/content needs.
+\*------------------------------------*/
+/*------------------------------------*\
+    #Colors
+\*------------------------------------*/
+/**
+Base colours that can be used when prototyping. Taken from http://clrs.cc/
+
+1. We ideally avoid using pure white on pure black, because the contrast is
+so great that it creates the illusion that text is vibrating on screen.
+ */
+/* 1 */
+/* 1 */
+/**
+Social media colours that might be useful.
+See: https://brandcolors.net/
+ */
+/* amiko-regular - latin */
+@font-face {
+  font-family: 'amiko-webfont';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Amiko Regular"), local("Amiko-Regular"), url("../fonts/Amiko-Regular-webfont.woff2") format("woff2"), url("../fonts/Amiko-Regular-webfont.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* amiko-semi-bold - latin */
+@font-face {
+  font-family: 'amiko-webfont';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Amiko Semi Bold"), local("Amiko-Semi-Bold"), url("../fonts/Amiko-SemiBold-webfont.woff2") format("woff2"), url("../fonts/Amiko-SemiBold-webfont.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* amiko-bold - latin */
+@font-face {
+  font-family: 'amiko-webfont';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Amiko Bold"), local("Amiko-Bold"), url("../fonts/Amiko-Bold-webfont.woff2") format("woff2"), url("../fonts/Amiko-Bold-webfont.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/*------------------------------------*\
+    #Paths
+\*------------------------------------*/
+/*------------------------------------*\
+    #Sizes
+\*------------------------------------*/
+/**
+A modular size scale, calculated using our base unit of measurement and
+a ratio number taken from the base line-height as defined in /40-base/typography
+
+We can reuse these sizes for margins and padding for visual harmony.
+ */
+/*------------------------------------*\
+    #Typesetting
+\*------------------------------------*/
+/**
+Use https://www.cssfontstack.com/ and https://meowni.ca/font-style-matcher/ to pick
+system fonts that are reasonably close to any web fonts needed for the project.
+
+This improves performance, avoids Flash Of Invisible Text (FOIT) and minimises
+Flash of Unstyled Content (FOUC) - see https://helenvholmes.com/writing/type-is-your-right/
+
+Be sure to include fonts for both Mac OS and Windows. Use quote marks around
+fonts with white space in their name.
+
+When Font Face Observer has detected that the @font-face files are loaded, then we
+can safely use the web fonts instead of the system fonts.
+ */
+/*------------------------------------*\
+    #Functions
+\*------------------------------------*/
+/*------------------------------------*\
+    #CSS unit functions
+\*------------------------------------*/
+/**
+ #em
+ */
+/**
+ #rem
+ */
+/**
+ #px
+ */
+/**
+ #Return a number without a unit
+ */
+/**
+ #Remove any unit present to return a unitless number
+ */
+/*------------------------------------*\
+    #Mixins
+\*------------------------------------*/
+/*------------------------------------*\
+    #Font sizes
+\*------------------------------------*/
+/*------------------------------------*\
+    #Media query
+\*------------------------------------*/
+/*------------------------------------*\
+    #Stack (formerly axiomatic owl)
+\*------------------------------------*/
+/**
+This mixin allows us to add vertical spacing between a container's direct children,
+much like the 'axiomatic owl' but limited to specific use cases.
+
+By applying Flexbox to the parent container, we can use auto margin on a specific
+child element. This way, we can choose to group elements inside the stack to the
+top/bottom of the vertical space, which is useful for card-like components.
+
+The current default measure for the stack matches the base line-height,
+as defined in /40-base/typography.
+
+Use with a specific measure, or without for the default measure, e.g.
+
+main {
+	@include stack(4rem);
+}
+
+article {
+	@include stack;
+}
+ */
+/*------------------------------------*\
+    #Base
+\*------------------------------------*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+/*------------------------------------*\
+    #Animation
+\*------------------------------------*/
+/*
+ * Use smooth-scrolling if user has not specified that they
+ * prefer reduced motion in their browser. See
+ * https://css-tricks.com/almanac/properties/s/scroll-behavior/
+ */
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth; } }
+
+/*
+ * Respect the choices of users who do not want animations.
+ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-play-state: paused !important;
+    scroll-behavior: auto !important;
+    transition: none !important; } }
+
+/*------------------------------------*\
+    #Background colours
+\*------------------------------------*/
+.bg--alert {
+  background-color: #ff4136;
+  color: #000; }
+
+.bg--success {
+  background-color: #2ecc40;
+  color: #000; }
+
+.bg--warning {
+  background-color: #ffdc00;
+  color: #000; }
+
+/*------------------------------------*\
+    #Body
+\*------------------------------------*/
+html {
+  height: 100%; }
+
+/**
+ Typographical styles for fonts are in 40-base/_typography.scss
+ */
+body {
+  background: #F5F5F5;
+  color: #1A1C1B;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+/*------------------------------------*\
+    #Box sizing
+\*------------------------------------*/
+*,
+*::before,
+*::after {
+  background-color: inherit;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: inherit;
+  margin: 0;
+  overflow-wrap: break-word;
+  padding: 0; }
+
+/*------------------------------------*\
+    #Focus
+\*------------------------------------*/
+:focus {
+  outline: 0.20354rem solid #7342EC;
+  outline-offset: 0.20354rem; }
+
+/**
+Where focus is moved to the target via JavaScript, it is
+acceptable not to show a focus outline.
+ */
+main:focus,
+#main:focus,
+[tabindex='-1']:focus {
+  outline: none; }
+
+/*------------------------------------*\
+    #Hide and show items inclusively
+
+    See https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+\*------------------------------------*/
+/*
+ * Hide from everybody and remove from the document flow, using the hidden
+ * attribute.
+ *
+ * Use if a component should remain hidden regardless of CSS being
+ * available or not (the style below provides support for legacy browsers).
+ */
+[hidden] {
+  display: none !important; }
+
+/*
+ * Hide from everybody and remove from the document flow, using the %hidden
+ * placeholder (extend the placeholder with Sass to avoid it appearing
+ * repeatedly in your markup).
+ *
+ * Use if a component requires a basic show and hide interaction, and the
+ * content should become available were CSS to fail.
+ */
+/*
+ * Hide from everybody while maintaining layout, using the %invisible
+ * placeholder (extend the placeholder with Sass to avoid it appearing
+ * repeatedly in your markup).
+ *
+ * Use if a more complex transition is required, like when transitioning an
+ * off-screen navigation into the viewport. Best paired with other CSS
+ * properties that negate its position in the DOM e.g. `position: absolute;`
+ */
+/*
+ * Hide visually only - remains available to Assistive Technology -
+ * using the %visually-hidden placeholder (extend the placeholder with
+ * Sass to avoid it appearing repeatedly in your markup).
+ */
+.visuallyhidden:not(:focus):not(:active), .skip-link:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }
+
+/*
+ *The :not portions of the following selector allow a means for any
+ * focusable element to become visible when focused/active by a user.
+ */
+/*
+ * Make sure that the siblings of hidden components do not cause the hidden
+ * component to take up any vertical space.
+ */
+[hidden] + *,
+.hidden + *,
+.visuallyhidden + *,
+.skip-link + * {
+  margin-top: 0 !important; }
+
+br {
+  margin-top: 0; }
+
+/*
+ * Restore an element that has been visually hidden, using the %visually-hidden
+ * placeholder (extend the placeholder with Sass to avoid it appearing
+ * repeatedly in your markup).
+ */
+/*------------------------------------*\
+    #Images
+\*------------------------------------*/
+img {
+  height: auto;
+  width: 100%; }
+
+/*------------------------------------*\
+    #Text-level elements
+\*------------------------------------*/
+b,
+strong,
+.strong {
+  font-weight: 600; }
+
+em,
+i {
+  font-style: italic; }
+
+small,
+.small,
+.small-caps {
+  font-size: 0.8em;
+  letter-spacing: 0.03em; }
+
+.small-caps {
+  text-shadow: 0 0 0 #222;
+  text-transform: uppercase; }
+
+code {
+  background-color: #001f3f;
+  color: #2ecc40;
+  font-family: Monaco, "Lucida Console", monospace;
+  padding-left: 0.20354rem;
+  padding-right: 0.20354rem; }
+
+/*------------------------------------*\
+    #Links
+\*------------------------------------*/
+/**
+Default global link styles that do not interfere with component link styles
+- see https://alexcarpenter.me/screencasts/2019/02/global-link-styles/
+
+1. Don't rely on colour alone for styling links - see
+https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F73
+
+2. Remove the outline on focused links when they are also active/hovered.
+ */
+a:not([class]) {
+  border: 0;
+  color: #7342EC;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  /* 1 */
+  text-decoration-skip-ink: auto;
+  transition: all ease-in-out 0.2s; }
+  a:not([class]):visited {
+    color: #1A1C1B; }
+  a:not([class]):hover, a:not([class]):active {
+    color: #7342EC;
+    outline-width: 0;
+    /* 2 */
+    text-decoration: none; }
+
+/*------------------------------------*\
+    #Lists
+\*------------------------------------*/
+/**
+Remove default list styles on lists with a class name (e.g. 'nav-list')
+and on lists within the `nav` element
+ */
+nav ul,
+ol[class],
+ul[class] {
+  list-style: none;
+  padding-left: 0; }
+
+ul:not([class]),
+ol:not([class]) {
+  padding-left: 1.875em; }
+  ul:not([class]) li,
+  ol:not([class]) li {
+    padding-left: 1em; }
+  ul:not([class]) ul,
+  ul:not([class]) ol,
+  ol:not([class]) ul,
+  ol:not([class]) ol {
+    padding-left: 1em; }
+  ul:not([class]) > * + *,
+  ul:not([class]) li ul,
+  ul:not([class]) li ol,
+  ol:not([class]) > * + *,
+  ol:not([class]) li ul,
+  ol:not([class]) li ol {
+    margin-top: 0.5em; }
+
+ol:not([class]) {
+  list-style-type: none; }
+  ol:not([class]) > li {
+    column-break-inside: avoid;
+    counter-increment: orderedList;
+    display: block;
+    position: relative; }
+    ol:not([class]) > li:before {
+      content: counters(orderedList, ".");
+      display: block;
+      font-weight: 500;
+      left: -0.8em;
+      position: absolute;
+      top: 0; }
+    ol:not([class]) > li:first-child {
+      counter-reset: orderedList; }
+    ol:not([class]) > li ol li {
+      padding-left: 1.75em; }
+
+.clean-list li {
+  display: block; }
+
+.inline-list li {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  margin-right: 1.5em;
+  margin-top: 0; }
+
+.inline-list li:last-child {
+  margin-bottom: 0;
+  margin-right: 0; }
+
+/**
+Description lists / Definition lists
+ */
+dl dd + dt {
+  margin-top: 0.5em; }
+
+dl dt + dd,
+dl dd + dd {
+  margin-top: 0.25em; }
+
+/*------------------------------------*\
+    #Skip link
+\*------------------------------------*/
+.skip-link {
+  background-color: #FF5A5E;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.625em 0.9375em; }
+  .skip-link:focus, .skip-link:active {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    outline: none; }
+
+/*------------------------------------*\
+    #Tables
+
+    1. Logical property allows text-direction to change with `ltr`
+\*------------------------------------*/
+table {
+  background-color: transparent;
+  border-collapse: collapse;
+  width: 100%; }
+
+th {
+  border: 0.11973rem solid;
+  padding: 0.75rem;
+  text-align: left;
+  text-align: start;
+  /* 1 */ }
+
+td {
+  border: 0.11973rem solid;
+  padding: 0.75rem; }
+
+table caption {
+  padding-bottom: 1rem;
+  text-align: left;
+  text-align: start;
+  /* 1 */ }
+
+/**
+Bare minimum handling of large tables on small screens: wrapping
+div adds shading to the right-hand side to indicate when a table
+can be scrolled horizontally. The shading moves to the left-hand
+side when the table has been fully scrolled to the right, and vice versa.
+See https://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
+ */
+@media screen {
+  .table-wrap {
+    background-attachment: local, local, scroll, scroll;
+    background-color: inherit;
+    background-image: linear-gradient(90deg, #fafafa, transparent), linear-gradient(270deg, #fafafa, transparent), linear-gradient(90deg, rgba(195, 195, 197, 0.5), transparent), linear-gradient(270deg, rgba(195, 195, 197, 0.5), transparent);
+    background-position: 0 0, 100% 0, 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 4em 100%, 4em 100%, 2em 100%, 2em 100%;
+    overflow-x: auto;
+    padding-left: 0.11973rem; } }
+
+/**
+ Sticky header: an enhancement for tables without any horizontal overflow
+ */
+@media screen {
+  .js-sticky th {
+    background-clip: padding-box;
+    background-color: #fafafa;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /**
+		 Adds a bottom border, helpful when scrolling a table with a sticky header
+		 */ }
+    .js-sticky th::after {
+      background-color: #222;
+      bottom: 0;
+      content: '';
+      height: 0.05987rem;
+      left: 0;
+      position: absolute;
+      width: 100%; } }
+
+/*------------------------------------*\
+    #Typography
+\*------------------------------------*/
+body {
+  font-family: Geneva, "Segoe UI", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7; }
+
+/**
+All headings start off at the same size by default, so we focus on the semantic hierarchy.
+ */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Geneva, "Segoe UI", sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0; }
+
+/**
+When Font Face Observer has detected that the @font-face files are loaded, then we
+can safely use the web fonts instead of the system fonts.
+ */
+.fonts-loaded body {
+  font-family: "amiko-webfont"; }
+
+.fonts-loaded h1, .fonts-loaded h2, .fonts-loaded h3, .fonts-loaded h4, .fonts-loaded h5, .fonts-loaded h6,
+.fonts-loaded .h1, .fonts-loaded .h2, .fonts-loaded .h3, .fonts-loaded .h4, .fonts-loaded .h5, .fonts-loaded .h6 {
+  font-family: "amiko-webfont"; }
+
+h1,
+.h1 {
+  font-size: 2.5rem; }
+
+h2,
+.h2 {
+  font-size: 1.5rem; }
+
+h3,
+.h3 {
+  font-size: 1.953rem; }
+
+h4,
+.h4 {
+  font-size: 1.563rem; }
+
+h5,
+.h5 {
+  font-size: 1.25rem; }
+
+h6,
+.h6 {
+  font-size: 1rem;
+  line-height: 1.7; }
+
+/*------------------------------------*\
+    #Print styles
+
+    We aim to:
+    - Hide everything that is irrelevant for print
+    - Make everything black and white and easy to read
+
+    It is perfectly acceptable to use !important for print styles
+    as they should override everything else.
+
+    IMPORTANT: Anything that uses flexbox or grid on screen
+    and needs to appear in print must be refactored to use
+    block or inline block layout. Otherwise it will not print.
+    You can check this using the print preview in Chrome/Firefox.
+\*------------------------------------*/
+@media print {
+  *,
+  *:before,
+  *:after,
+  p:first-line,
+  div:first-line,
+  blockquote:first-line,
+  li:first-line {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    overflow: visible !important;
+    position: static !important;
+    text-shadow: none !important; }
+  body,
+  .lazy,
+  .lazyload {
+    display: block !important; }
+  .js-object-fit,
+  .responsive-wrapper,
+  picture {
+    padding: 0 !important; }
+    .js-object-fit img,
+    .responsive-wrapper img,
+    picture img {
+      display: block !important;
+      height: auto !important;
+      width: 100% !important; }
+  li,
+  .js-object-fit,
+  .responsive-wrapper,
+  picture,
+  figure,
+  img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid; }
+  .l-sidebar > div {
+    display: block !important; }
+  .js-carousel > * {
+    display: block !important; }
+  .js-carousel ul.carousel-controls {
+    display: none !important; }
+  .js-carousel ul.clean-list li + li {
+    margin-top: 1cm !important; }
+  .component--collapsibles [hidden] {
+    display: block !important; }
+  .skip-to-content,
+  #cookie-banner,
+  nav,
+  .component--video,
+  .global-footer {
+    display: none !important; } }
+
+/*------------------------------------*\
+    #Layouts
+
+    Only selected layouts that will not break in older browsers
+\*------------------------------------*/
+/*------------------------------------*\
+    #Utilities
+\*------------------------------------*/
+/*------------------------------------*\
+    #Alignment utilities
+
+    1. Logical property allows text-direction to change with `ltr`
+\*------------------------------------*/
+.u-float-left {
+  float: left;
+  float: inline-start;
+  /* 1 */ }
+
+.u-float-right {
+  float: right;
+  float: inline-end;
+  /* 1 */ }
+
+.u-text-center {
+  text-align: center; }
+
+.u-text-left {
+  text-align: left;
+  text-align: start;
+  /* 1 */ }
+
+.u-text-right {
+  text-align: right;
+  text-align: end;
+  /* 1 */ }
+
+/**
+Change text-alignment at the "laptop" breakpoint,
+as defined in /10-settings/breakpoints
+
+1. Logical property allows text-direction to change with `ltr`
+ */
+@media screen and (min-width: 80em) {
+  .u-text-left-from-lap {
+    text-align: left;
+    text-align: start;
+    /* 1 */ } }
+
+@media screen and (min-width: 80em) {
+  .u-text-center-from-lap {
+    text-align: center; } }
+
+@media screen and (min-width: 80em) {
+  .u-text-right-from-lap {
+    text-align: right;
+    text-align: end;
+    /* 1 */ } }
+
+/*------------------------------------*\
+    #Clearfix utility
+
+    https://css-tricks.com/snippets/css/clear-fix/
+
+    Extend the clearfix placeholder with Sass to avoid
+    having it appear over and over in your markup.
+\*------------------------------------*/
+/*------------------------------------*\
+    #Layout utilities
+\*------------------------------------*/
+/**
+For a full-viewport-width element inside a limited width parent.
+The parent must be exactly centered in the browser in order for this
+to work - see https://css-tricks.com/full-width-containers-limited-width-parents/
+ */
+.u-full-width {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  right: 50%;
+  width: 100vw; }
+
+/**
+To horizontally center a block-level item
+ */
+.u-center {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }

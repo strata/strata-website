@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    #Global header
+\*------------------------------------*/
+
+.global-header {
+	background-color: $strata-purple;
+	div {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.5em;
+		justify-content: center;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem($max-width);
+		box-sizing: content-box;
+		padding: $size-plus1 5vw;
+		color: white;
+		font-size: rem(20);
+		@include mq(400) {
+			flex-direction: row;
+			align-content: flex-end;
+			justify-content: space-between;
+		}
+		@include mq($bp-tab-small) {
+			padding-left: 10vw;
+			padding-right: 10vw;
+		}
+	}
+	ul {
+		display: flex;
+		column-gap: 1em;
+		list-style: none;
+		padding: 0;
+		li {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	a:link,
+	a:visited {
+		text-decoration: none;
+		color:white;
+		border-bottom: solid 2px transparent;
+		transition: border-color ease-in-out 0.2s;
+	}
+	a:hover {
+		border-color: rgba($color: #ffffff, $alpha: 0.5);
+	}
+	a:focus {
+		outline-color: $white;
+	}
+	a:hover,
+	a:active {
+		outline-width: 0;
+	}
+	img {
+		height: rem(40);
+		width: auto;
+		@include mq($bp-palm) {
+			height: rem(58);
+		}
+	}
+}

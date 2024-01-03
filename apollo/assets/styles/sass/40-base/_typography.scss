@@ -1,0 +1,83 @@
+/*------------------------------------*\
+    #Typography
+\*------------------------------------*/
+
+body {
+	font-family: $font-family;
+	font-size: 1.125rem; // Equivalent to 18px browser default
+	font-style: $font-style;
+	font-weight: $font-weight;
+	line-height: 1.7;
+}
+
+
+
+/**
+All headings start off at the same size by default, so we focus on the semantic hierarchy.
+ */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $heading-family;
+	font-size: 1.25rem;
+	font-style: $heading-style;
+	font-weight: $heading-weight;
+	line-height: 1.2;
+	margin: 0;
+}
+
+
+
+/**
+When Font Face Observer has detected that the @font-face files are loaded, then we
+can safely use the web fonts instead of the system fonts.
+ */
+.fonts-loaded {
+
+	body {
+		font-family: $font-loaded-family;
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 {
+		font-family: $heading-loaded-family;
+	}
+
+}
+
+
+
+h1,
+.h1 {
+	@include text-h1;
+}
+
+
+h2,
+.h2 {
+	@include text-h2;
+}
+
+
+h3,
+.h3 {
+	@include text-h3;
+}
+
+
+h4,
+.h4 {
+	@include text-h4;
+}
+
+
+h5,
+.h5 {
+	@include text-h5;
+}
+
+
+h6,
+.h6 {
+	@include text-m;
+	line-height: 1.7;
+}
