@@ -658,9 +658,9 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
   transition: all ease-in-out 0.2s; }
   a:not([class]):visited {
-    color: #756799; }
+    color: #1A1C1B; }
   a:not([class]):hover, a:not([class]):active {
-    color: #1A1C1B;
+    color: #7342EC;
     outline-width: 0;
     /* 2 */
     text-decoration: none; }

@@ -55,8 +55,8 @@ main,
 		color: $strata-purple;
 		transition: background-color ease-in-out 0.2s;
 		&:visited {
-			color: $strata-link-visited;
-			border-color: $strata-link-visited;
+			color: $strata-text;
+			border-color: $strata-text;
 		}
 		&:hover,
 		&:focus,

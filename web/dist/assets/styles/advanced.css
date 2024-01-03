@@ -318,8 +318,8 @@ main,
     color: #7342EC;
     transition: background-color ease-in-out 0.2s; }
     .main-cta a.cta:visited {
-      color: #756799;
-      border-color: #756799; }
+      color: #1A1C1B;
+      border-color: #1A1C1B; }
     .main-cta a.cta:hover, .main-cta a.cta:focus, .main-cta a.cta:active {
       color: white;
       border-color: #1A1C1B;
